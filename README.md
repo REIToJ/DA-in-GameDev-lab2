@@ -213,7 +213,17 @@ public class DragonPicker : MonoBehaviour
 
 ## Задание 2
 ### В проект, выполненный в предыдущем задании, добавить систему проверки того, что SDK подключен (доступен в режиме онлайн и отвечает на запросы);
+Ход работы:
 
+Подключиить SDK Яндекс.Игр и добавить консоль-лог, который выведет сообщение о его подключении. Для этого в файл index.html в папке билда игры дописать скрипт:
+```JS
+<!-- Yandex Games SDK -->
+<script src="https://yandex.ru/games/sdk/v2"> </script>
+YaGames.init().then(ysdk => {
+        console.log('Yandex SDK initialized');
+        window.ysdk = ysdk;
+    });
+```
 
 
 ## Задание 3
